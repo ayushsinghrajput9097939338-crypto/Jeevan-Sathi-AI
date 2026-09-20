@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Jeevan Sathi AI launcher artwork. Adaptive-icon wiring is unchanged. -->
-<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/jeevan_sathi_icon"
-    android:gravity="center" />
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:inset="24dp">
+    <bitmap
+        android:src="@drawable/jeevan_sathi_icon"
+        android:gravity="fill" />
+</inset>
