@@ -186,7 +186,7 @@
   <string name="settings_dialog_view_app_terms_of_service" translatable="true" description="Button label to open and read the application's terms of service. [CHAR_LIMIT=30]">View App Terms of Service</string>
   <string name="settings_dialog_gemma_prohibited_use_policy" translatable="true" description="Link text pointing to the Gemma model's prohibited use policy document. [CHAR_LIMIT=44]">Gemma Prohibited Use Policy</string>
   <string name="settings_dialog_firebase_analytics_title" translatable="true" description="Title for the settings toggle control to opt-in/out of analytics tracking. [CHAR_LIMIT=31]">Firebase Analytics</string>
-  <string name="settings_dialog_firebase_analytics_description" translatable="true" description="Description for the Firebase Analytics toggle explaining that it helps improve the app. [CHAR_LIMIT=90]">Send usage data to help improve AI Edge Gallery</string>
+  <string name="settings_dialog_firebase_analytics_description" translatable="true" description="Description for the Firebase Analytics toggle explaining that it helps improve the app. [CHAR_LIMIT=90]">Send usage data to help improve Jeevan Sathi AI</string>
   <string name="share" translatable="true" description="Button label to share content (images, text) via other apps. [CHAR_LIMIT=9]">Share</string>
   <string name="slide_up_to_cancel" translatable="true" description="Instruction text telling the user they can slide their finger up to cancel voice recording. [CHAR_LIMIT=31]">Slide up to cancel</string>
   <string name="system_prompt_placeholder" translatable="true" description="Placeholder hint text inside the system prompt editor text field showing example instructions. [CHAR_LIMIT=170]">Enter system instructions (e.g., \"You are a versatile assistant. Provide accurate, context-aware responses in a professional tone.\")</string>
@@ -439,7 +439,7 @@
   <string name="mcp_tool_revoke_permission_content" translatable="true" description="Message asking the user if they are sure they want to revoke the automatic execution permission for the tool. [CHAR_LIMIT=135]">Are you sure you want to revoke permission to automatically call this tool?</string>
   <string name="manage_mcp_servers" translatable="true" description="Title of the screen/bottom sheet where users can manage Model Context Protocol (MCP) servers. [CHAR_LIMIT=31]">Manage MCP servers</string>
   <string name="add_mcp_server" translatable="true" description="Button label to add a new MCP server. [CHAR_LIMIT=26]">Add MCP server</string>
-  <string name="learn_more_about_mcp" translatable="true" description="Link text directing users to documentation about Model Context Protocol (MCP). [CHAR_LIMIT=90]">Learn more about MCP in Google AI Edge Gallery</string>
+  <string name="learn_more_about_mcp" translatable="true" description="Link text directing users to documentation about Model Context Protocol (MCP). [CHAR_LIMIT=90]">Learn more about MCP in Jeevan Sathi AI</string>
   <string name="learn_more_about_mcp_short" translatable="true" description="Link text to learn more about MCP (Model Context Protocol). [CHAR_LIMIT=18]">Learn more</string>
   <string name="search_mcp_server" translatable="true" description="Placeholder text in a search field to search for an MCP (Model Context Protocol) server. [CHAR_LIMIT=37]">Search for an MCP server</string>
   <plurals name="mcp_servers_count" translatable="true">
