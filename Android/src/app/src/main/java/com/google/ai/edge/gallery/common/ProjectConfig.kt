@@ -29,7 +29,7 @@ object ProjectConfig {
   // The scheme needs to match the
   // "android.defaultConfig.manifestPlaceholders["appAuthRedirectScheme"]" field in
   // "build.gradle.kts".
-  const val redirectUri = "b78344a5-0bd2-467e-93ed-82501810030e"
+  const val redirectUri = "com.google.aiedge.gallery.oauth:/oauth2redirect"
 
   // OAuth 2.0 Endpoints (Authorization + Token Exchange)
   private const val authEndpoint = "https://huggingface.co/oauth/authorize"
