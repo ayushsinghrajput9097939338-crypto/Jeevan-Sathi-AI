@@ -570,22 +570,8 @@ private fun IntroText(enableAnimation: Boolean) {
     }
 
   val introText = buildAnnotatedString {
-    val gemma4Url = "https://ai.google.dev/gemma"
-    append("${stringResource(R.string.gemma4_intro_part_1)} ")
-    append(
-      buildTrackableUrlAnnotatedString(
-        url = litertUrl,
-        linkText = stringResource(R.string.litert_community_label),
-      )
-    )
-    append("${stringResource(R.string.gemma4_intro_part_2)} ")
-    append(
-      buildTrackableUrlAnnotatedString(
-        url = gemma4Url,
-        linkText = stringResource(R.string.gemma4_label),
-      )
-    )
-    append(".")
+  append("Experience the power of advanced, on-device AI—fast, secure, and entirely offline.")
+  }
   }
   Text(
     introText,
