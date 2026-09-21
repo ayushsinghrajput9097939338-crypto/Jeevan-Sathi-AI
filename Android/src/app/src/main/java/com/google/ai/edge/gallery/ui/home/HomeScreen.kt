@@ -572,7 +572,6 @@ private fun IntroText(enableAnimation: Boolean) {
   val introText = buildAnnotatedString {
   append("Experience the power of advanced, on-device AI—fast, secure, and entirely offline.")
   }
-  }
   Text(
     introText,
     style = MaterialTheme.typography.bodyMedium,
