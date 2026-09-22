@@ -68,7 +68,7 @@ fun GalleryTopAppBar(
         ) {
           if (title == stringResource(R.string.app_name)) {
             Icon(
-              painterResource(R.drawable.icon),
+              painterResource(R.drawable.logo),
               modifier = Modifier.size(20.dp),
               contentDescription = null,
               tint = Color.Unspecified,
