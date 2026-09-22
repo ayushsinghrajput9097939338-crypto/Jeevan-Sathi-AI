@@ -216,7 +216,7 @@
   <string name="add_calendar_event_message" translatable="true" description="Status message confirming a calendar event is being added. [CHAR_LIMIT=110]">Adding \"Team meeting (10AM-11AM)\" to your calendar.</string>
   <string name="take_picture_message" translatable="true" description="Status message confirming the camera app is being opened. [CHAR_LIMIT=45]">Opening the camera app.</string>
   <string name="mobile_actions_title" translatable="false">Mobile Actions</string>
-  <string name="mobile_actions_description" translatable="true" description="Subtitle/description of the Mobile Actions feature, explaining users can control the device. [CHAR_LIMIT=44]">Control your device with simple commands</string>
+  <string name="mobile_actions_description" translatable="true" description="Subtitle/description of the Mobile Actions feature, explaining users can control the device. [CHAR_LIMIT=44]">Control your device with Advance AI</string>
   <string name="mobile_actions_supported_actions" translatable="true" description="Header for the list of sample commands supported by the mobile actions model. [CHAR_LIMIT=30]">Supported sample actions:</string>
   <string name="mobile_actions_tab_model_response" translatable="false">Model response</string>
   <string name="mobile_actions_tab_function_called" translatable="false">Function(s) called</string>
@@ -845,13 +845,13 @@
   <string name="gemma_reskin_try_gemma_4_description" translatable="true" description="Description for the Try Gemma 4 reskin onboarding section. [CHAR_LIMIT=150]">Engineered with pride in Sitamarhi, Bihar. A next-gen AI platform by 9th-grade innovator, Aayush.</string>
 
   <!-- Section header for other use cases. [CHAR_LIMIT=30] -->
-  <string name="explore_other_use_cases" translatable="true" description="Section header for other use cases. [CHAR_LIMIT=30]">Explore other use cases</string>
+  <string name="explore_other_use_cases" translatable="true" description="Section header for other use cases. [CHAR_LIMIT=30]">Other futures</string>
 
   <!-- Task Labels & Descriptions -->
   <string name="task_label_ai_chat" translatable="false">AI Chat</string>
-  <string name="task_label_prompt_lab" translatable="false">Prompt Lab</string>
-  <string name="task_label_ask_image" translatable="false">Ask Image</string>
-  <string name="task_label_audio_scribe" translatable="false">Audio Scribe</string>
+  <string name="task_label_prompt_lab" translatable="false">AI Chat</string>
+  <string name="task_label_ask_image" translatable="false">Ask by Image</string>
+  <string name="task_label_audio_scribe" translatable="false">Neural Audio</string>
   <string name="task_label_tiny_garden" translatable="false">Tiny Garden</string>
   <string name="task_label_agent_skills" translatable="false">Agent Skills</string>
   <!-- Description for the AI Chat task. [CHAR_LIMIT=100] -->
@@ -860,13 +860,13 @@
   <string name="task_short_desc_ai_chat" translatable="true" description="Short description for the AI Chat task. [CHAR_LIMIT=45]">Chat with an on-device LLM</string><!-- Description for the Ask Image task. [CHAR_LIMIT=100] -->
   <string name="task_desc_ask_image" translatable="true" description="Description for the Ask Image task. [CHAR_LIMIT=106]">Ask questions about images with on-device large language models</string>
   <!-- Short description for the Ask Image task. [CHAR_LIMIT=35] -->
-  <string name="task_short_desc_ask_image" translatable="true" description="Short description for the Ask Image task. [CHAR_LIMIT=45]">Ask questions about images</string><!-- Description for the Audio Scribe task. [CHAR_LIMIT=100] -->
+  <string name="task_short_desc_ask_image" translatable="true" description="Short description for the Ask Image task. [CHAR_LIMIT=45]">Ask questions with use images</string><!-- Description for the Audio Scribe task. [CHAR_LIMIT=100] -->
   <string name="task_desc_audio_scribe" translatable="true" description="Description for the Audio Scribe task. [CHAR_LIMIT=142]">Instantly transcribe and/or translate audio clips using on-device large language models</string>
   <!-- Short description for the Audio Scribe task. [CHAR_LIMIT=35] -->
-  <string name="task_short_desc_audio_scribe" translatable="true" description="Short description for the Audio Scribe task. [CHAR_LIMIT=45]">Transcribe and translate audio</string><!-- Description for the Prompt Lab task. [CHAR_LIMIT=100] -->
+  <string name="task_short_desc_audio_scribe" translatable="true" description="Short description for the Audio Scribe task. [CHAR_LIMIT=45]">Convert and translate voice instantly</string><!-- Description for the Prompt Lab task. [CHAR_LIMIT=100] -->
   <string name="task_desc_prompt_lab" translatable="true" description="Description for the Prompt Lab task. [CHAR_LIMIT=99]">Single turn use cases with on-device large language models</string>
   <!-- Short description for the Prompt Lab task. [CHAR_LIMIT=35] -->
-  <string name="task_short_desc_prompt_lab" translatable="true" description="Short description for the Prompt Lab task. [CHAR_LIMIT=45]">Single turn use cases</string>
+  <string name="task_short_desc_prompt_lab" translatable="true" description="Short description for the Prompt Lab task. [CHAR_LIMIT=45]">Chat with AI</string>
   <!-- Text on a button that removes an optional component or item. [CHAR_LIMIT=15] -->
   <string name="remove" translatable="true" description="Text on a button that removes an optional component or item. [CHAR_LIMIT=15]">Remove</string>
   <!-- Title for the optional components section in model details. [CHAR_LIMIT=30] -->
