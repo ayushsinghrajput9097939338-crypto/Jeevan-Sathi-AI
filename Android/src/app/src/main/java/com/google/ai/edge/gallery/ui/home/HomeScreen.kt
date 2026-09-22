@@ -173,7 +173,11 @@ fun HomeScreen(
   val context = LocalContext.current
   val isDevBuild = context.packageName.endsWith(".dev")
 
-  val tasks = uiState.tasks
+  val tasks =
+    uiState.tasks.filter {
+        it.id != BuiltInTaskId.LLM_TINY_GARDEN &&
+        it.id != BuiltInTaskId.MP_SCRAPBOOK
+    }
 
   val categoryMap: Map<String, CategoryInfo> =
     remember(tasks) { tasks.associateBy { it.category.id }.mapValues { it.value.category } }
