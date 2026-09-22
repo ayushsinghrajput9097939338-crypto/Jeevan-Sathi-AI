@@ -797,7 +797,12 @@ private fun TaskList(
     verticalAlignment = Alignment.Top,
     contentPadding = PaddingValues(horizontal = 20.dp),
   ) { pageIndex ->
-    val tasks = tasksByCategories[sortedCategories[pageIndex].id]!!.filter { it.id !in taskIds }
+    val tasks =
+    tasksByCategories[sortedCategories[pageIndex].id]!!.filter {
+        it.id !in taskIds &&
+        it.id != BuiltInTaskId.LLM_TINY_GARDEN &&
+        it.id != BuiltInTaskId.MP_SCRAPBOOK
+    }
     Column(
       verticalArrangement = Arrangement.spacedBy(16.dp),
       modifier =
