@@ -48,7 +48,7 @@
   <string name="benchmark_no_results" translatable="true" description="Message shown when there are no benchmark results to display. [CHAR_LIMIT=34]">No benchmark results</string>
   <string name="benchmark_tokens_limit_message" translatable="true" description="Warning message explaining token limits for LLM benchmarking. [CHAR_LIMIT=140]">Ensure that the sum of prefill and decode tokens remains under the model\'s maximum token limit (%1$d vs %2$d)</string>
   <string name="best_overall" translatable="true" description="Badge label indicating a model is the best overall choice. [CHAR_LIMIT=20]">Best overall</string>
-  <string name="model_list_experimental_label" translatable="true" description="Label indicating a model is experimental. [CHAR_LIMIT=20]">EXPERIMENTAL</string>
+  <string name="model_list_experimental_label" translatable="true" description="Label indicating a model is experimental. [CHAR_LIMIT=20]">ADVANCE</string>
   <string name="cancel" translatable="true" description="Common button label to cancel the current action or close a dialog. [CHAR_LIMIT=9]">Cancel</string>
   <string name="category_unlabeled" translatable="true" description="Category label for models that do not have a specific category. [CHAR_LIMIT=18]">Unlabeled</string>
   <string name="category_llm" translatable="true" description="Category label for Large Language Models. [CHAR_LIMIT=18]">LLM</string>
@@ -142,7 +142,7 @@
     <item quantity="one">%d model available</item>
     <item quantity="other">%d models available</item>
   </plurals>
-  <string name="model_list_recommended_models_title" translatable="true" description="Section header in the model list for models recommended for download. [CHAR_LIMIT=31]">Recommended models</string>
+  <string name="model_list_recommended_models_title" translatable="true" description="Section header in the model list for models recommended for download. [CHAR_LIMIT=31]">Abliable Models</string>
   <string name="model_manager" translatable="true" description="Title of the screen where users can manage (download, delete, import) models. [CHAR_LIMIT=22]">Model Manager</string>
   <string name="model_manager_select_task_title" translatable="true" description="Header instructing the user to choose a specific task or use case to try with the models. [CHAR_LIMIT=40]">Select a use case to try</string>
   <string name="model_not_downloaded_msg" translatable="true" description="Status message indicating a model must be downloaded before it can be used. [CHAR_LIMIT=45]">Model not downloaded yet</string>
@@ -855,16 +855,16 @@
   <string name="task_label_tiny_garden" translatable="false">Tiny Garden</string>
   <string name="task_label_agent_skills" translatable="false">Agent Skills</string>
   <!-- Description for the AI Chat task. [CHAR_LIMIT=100] -->
-  <string name="task_desc_ai_chat" translatable="true" description="Description for the AI Chat task. [CHAR_LIMIT=90]">Chat with on-device large language models</string>
+  <string name="task_desc_ai_chat" translatable="true" description="Description for the AI Chat task. [CHAR_LIMIT=90]">Nexus Chat / Experience seamless offline intelligence</string>
   <!-- Short description for the AI Chat task. [CHAR_LIMIT=35] -->
   <string name="task_short_desc_ai_chat" translatable="true" description="Short description for the AI Chat task. [CHAR_LIMIT=45]">Chat with an on-device LLM</string><!-- Description for the Ask Image task. [CHAR_LIMIT=100] -->
-  <string name="task_desc_ask_image" translatable="true" description="Description for the Ask Image task. [CHAR_LIMIT=106]">Ask questions about images with on-device large language models</string>
+  <string name="task_desc_ask_image" translatable="true" description="Description for the Ask Image task. [CHAR_LIMIT=106]">Visual Core / Advanced multimodal image processing</string>
   <!-- Short description for the Ask Image task. [CHAR_LIMIT=35] -->
   <string name="task_short_desc_ask_image" translatable="true" description="Short description for the Ask Image task. [CHAR_LIMIT=45]">Ask questions with use images</string><!-- Description for the Audio Scribe task. [CHAR_LIMIT=100] -->
-  <string name="task_desc_audio_scribe" translatable="true" description="Description for the Audio Scribe task. [CHAR_LIMIT=142]">Instantly transcribe and/or translate audio clips using on-device large language models</string>
+  <string name="task_desc_audio_scribe" translatable="true" description="Description for the Audio Scribe task. [CHAR_LIMIT=142]">Voice Engine / Real-time speech recognition and translation</string>
   <!-- Short description for the Audio Scribe task. [CHAR_LIMIT=35] -->
   <string name="task_short_desc_audio_scribe" translatable="true" description="Short description for the Audio Scribe task. [CHAR_LIMIT=45]">Convert and translate voice instantly</string><!-- Description for the Prompt Lab task. [CHAR_LIMIT=100] -->
-  <string name="task_desc_prompt_lab" translatable="true" description="Description for the Prompt Lab task. [CHAR_LIMIT=99]">Single turn use cases with on-device large language models</string>
+  <string name="task_desc_prompt_lab" translatable="true" description="Description for the Prompt Lab task. [CHAR_LIMIT=99]">Logic Lab / Test and execute precise single-turn commands</string>
   <!-- Short description for the Prompt Lab task. [CHAR_LIMIT=35] -->
   <string name="task_short_desc_prompt_lab" translatable="true" description="Short description for the Prompt Lab task. [CHAR_LIMIT=45]">Chat with AI</string>
   <!-- Text on a button that removes an optional component or item. [CHAR_LIMIT=15] -->
@@ -915,7 +915,7 @@
   <!-- Label for the Generate QR code skill chip. [CHAR_LIMIT=20] -->
   <string name="skill_chip_generate_qr_code_label" translatable="true" description="Label for the Generate QR code skill chip. [CHAR_LIMIT=30]">Generate QR code</string>
   <!-- Description for the Mobile Actions task. [CHAR_LIMIT=100] -->
-  <string name="task_desc_mobile_actions" translatable="true" description="Description for the Mobile Actions task. [CHAR_LIMIT=91]">Perform various device actions through Function Gemma</string><!-- Description for the Tiny Garden task. [CHAR_LIMIT=300] -->
+  <string name="task_desc_mobile_actions" translatable="true" description="Description for the Mobile Actions task. [CHAR_LIMIT=91]">Smart Automation / Control your device with offline AI logic</string><!-- Description for the Tiny Garden task. [CHAR_LIMIT=300] -->
   <string name="task_desc_tiny_garden" translatable="true" description="Description for the Tiny Garden task. [CHAR_LIMIT=468]">Use natural language to plant, water, and harvest in this fully offline mini-game.\n\nNote: This is powered by the experimental FunctionGemma model optimized for latency. Due to its compact size (270M), it works well on simple instructions but responses may vary to more complex interactions.</string>
   <!-- Short description for the Tiny Garden task. [CHAR_LIMIT=35] -->
   <string name="task_short_desc_tiny_garden" translatable="true" description="Short description for the Tiny Garden task. [CHAR_LIMIT=45]">Use natural language to plant</string>
