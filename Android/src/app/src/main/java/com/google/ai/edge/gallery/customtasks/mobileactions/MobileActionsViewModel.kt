@@ -17,7 +17,6 @@ package com.google.ai.edge.gallery.customtasks.mobileactions
 
 import android.content.Context
 import android.content.Intent
-import android.media.AudioManager
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
 import android.provider.CalendarContract
@@ -45,7 +44,6 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
 import java.time.ZoneId
-import kotlin.math.roundToInt
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -263,114 +261,7 @@ constructor(@ApplicationContext private val appContext: Context) : ViewModel() {
       is CreateCalendarEventAction ->
         createCalendarEvent(context = context, datetime = action.datetime, title = action.title)
 
-      // Open an installed app.
-      is OpenAppAction -> openApp(context = context, appName = action.appName)
-
-      // Media volume controls.
-      is VolumeUpAction -> adjustVolume(context = context, direction = AudioManager.ADJUST_RAISE)
-      is VolumeDownAction -> adjustVolume(context = context, direction = AudioManager.ADJUST_LOWER)
-      is SetVolumeAction -> setVolume(context = context, percent = action.percent)
-
-      // Screen brightness.
-      is SetBrightnessAction -> setBrightness(context = context, percent = action.percent)
-
-      // Android system panels/settings.
-      is OpenSettingsAction -> openSystemIntent(context, Settings.ACTION_SETTINGS)
-      is OpenQuickSettingsAction -> openSystemIntent(context, Settings.ACTION_QUICK_SETTINGS)
-      is OpenInternetPanelAction -> openSystemIntent(context, Settings.Panel.ACTION_INTERNET_CONNECTIVITY)
-      is OpenBluetoothSettingsAction -> openSystemIntent(context, Settings.ACTION_BLUETOOTH_SETTINGS)
-
       else -> ""
-    }
-  }
-
-  private fun openApp(context: Context, appName: String): String {
-    val launchIntent = Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER)
-    val activities = context.packageManager.queryIntentActivities(launchIntent, 0)
-    val match =
-      activities.firstOrNull {
-        it.loadLabel(context.packageManager).toString().equals(appName.trim(), ignoreCase = true)
-      } ?:
-        activities.firstOrNull {
-          it.loadLabel(context.packageManager).toString().contains(appName.trim(), ignoreCase = true)
-        }
-
-    if (match == null) {
-      return "App '$appName' was not found on this device."
-    }
-
-    val intent = Intent(Intent.ACTION_MAIN).apply {
-      addCategory(Intent.CATEGORY_LAUNCHER)
-      component = match.activityInfo.let { android.content.ComponentName(it.packageName, it.name) }
-      addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    }
-
-    return try {
-      context.startActivity(intent)
-      ""
-    } catch (e: Exception) {
-      Log.e(TAG, "Failed to open app: $appName", e)
-      e.message ?: context.getString(R.string.unknown_error)
-    }
-  }
-
-  private fun adjustVolume(context: Context, direction: Int): String {
-    return try {
-      val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
-      audioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC, direction, AudioManager.FLAG_SHOW_UI)
-      ""
-    } catch (e: Exception) {
-      Log.e(TAG, "Failed to adjust volume", e)
-      e.message ?: context.getString(R.string.unknown_error)
-    }
-  }
-
-  private fun setVolume(context: Context, percent: Int): String {
-    return try {
-      val audioManager = context.getSystemService(Context.AUDIO_SERVICE) as AudioManager
-      val max = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
-      val target = (max * percent.coerceIn(0, 100) / 100.0).roundToInt()
-      audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, target, AudioManager.FLAG_SHOW_UI)
-      ""
-    } catch (e: Exception) {
-      Log.e(TAG, "Failed to set volume", e)
-      e.message ?: context.getString(R.string.unknown_error)
-    }
-  }
-
-  private fun setBrightness(context: Context, percent: Int): String {
-    if (!Settings.System.canWrite(context)) {
-      return try {
-        val intent =
-          Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS).apply {
-            data = "package:${context.packageName}".toUri()
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-          }
-        context.startActivity(intent)
-        "Android requires the 'modify system settings' permission. Please allow it and try again."
-      } catch (e: Exception) {
-        Log.e(TAG, "Failed to open brightness permission", e)
-        e.message ?: context.getString(R.string.unknown_error)
-      }
-    }
-
-    return try {
-      val value = (255 * percent.coerceIn(0, 100) / 100.0).roundToInt()
-      Settings.System.putInt(context.contentResolver, Settings.System.SCREEN_BRIGHTNESS, value)
-      ""
-    } catch (e: Exception) {
-      Log.e(TAG, "Failed to set brightness", e)
-      e.message ?: context.getString(R.string.unknown_error)
-    }
-  }
-
-  private fun openSystemIntent(context: Context, action: String): String {
-    return try {
-      context.startActivity(Intent(action).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
-      ""
-    } catch (e: Exception) {
-      Log.e(TAG, "Failed to open system intent: $action", e)
-      e.message ?: context.getString(R.string.unknown_error)
     }
   }
 
