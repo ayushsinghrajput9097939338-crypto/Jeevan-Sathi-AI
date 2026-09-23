@@ -16,12 +16,17 @@
 package com.google.ai.edge.gallery.customtasks.mobileactions
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Apps
+import androidx.compose.material.icons.outlined.Brightness6
 import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material.icons.outlined.FlashOff
 import androidx.compose.material.icons.outlined.FlashlightOn
 import androidx.compose.material.icons.outlined.Map
 import androidx.compose.material.icons.outlined.PersonAdd
+import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.VolumeDown
+import androidx.compose.material.icons.outlined.VolumeUp
 import androidx.compose.material.icons.outlined.Wifi
 import androidx.compose.ui.graphics.vector.ImageVector
 
@@ -34,6 +39,15 @@ enum class ActionType {
   ACTION_SHOW_LOCATION_ON_MAP,
   ACTION_OPEN_WIFI_SETTINGS,
   ACTION_CREATE_CALENDAR_EVENT,
+  ACTION_OPEN_APP,
+  ACTION_VOLUME_UP,
+  ACTION_VOLUME_DOWN,
+  ACTION_SET_VOLUME,
+  ACTION_SET_BRIGHTNESS,
+  ACTION_OPEN_SETTINGS,
+  ACTION_OPEN_QUICK_SETTINGS,
+  ACTION_OPEN_INTERNET_PANEL,
+  ACTION_OPEN_BLUETOOTH_SETTINGS,
 }
 
 data class FunctionCallDetails(
@@ -136,4 +150,80 @@ class CreateCalendarEventAction(val datetime: String, val title: String) :
         functionName = "createCalendarEvent",
         parameters = listOf(Pair("datetime", datetime), Pair("title", title)),
       ),
+  )
+
+
+// Action to open an installed app by its visible name.
+class OpenAppAction(val appName: String) :
+  Action(
+    type = ActionType.ACTION_OPEN_APP,
+    icon = Icons.Outlined.Apps,
+    functionCallDetails =
+      FunctionCallDetails(functionName = "openApp", parameters = listOf(Pair("appName", appName))),
+  )
+
+// Action to increase media volume.
+class VolumeUpAction() :
+  Action(
+    type = ActionType.ACTION_VOLUME_UP,
+    icon = Icons.Outlined.VolumeUp,
+    functionCallDetails = FunctionCallDetails(functionName = "volumeUp", parameters = listOf()),
+  )
+
+// Action to decrease media volume.
+class VolumeDownAction() :
+  Action(
+    type = ActionType.ACTION_VOLUME_DOWN,
+    icon = Icons.Outlined.VolumeDown,
+    functionCallDetails = FunctionCallDetails(functionName = "volumeDown", parameters = listOf()),
+  )
+
+// Action to set media volume percentage.
+class SetVolumeAction(val percent: Int) :
+  Action(
+    type = ActionType.ACTION_SET_VOLUME,
+    icon = Icons.Outlined.VolumeUp,
+    functionCallDetails =
+      FunctionCallDetails(functionName = "setVolume", parameters = listOf(Pair("percent", percent.toString()))),
+  )
+
+// Action to set screen brightness percentage.
+class SetBrightnessAction(val percent: Int) :
+  Action(
+    type = ActionType.ACTION_SET_BRIGHTNESS,
+    icon = Icons.Outlined.Brightness6,
+    functionCallDetails =
+      FunctionCallDetails(functionName = "setBrightness", parameters = listOf(Pair("percent", percent.toString()))),
+  )
+
+// Action to open the main Android settings screen.
+class OpenSettingsAction() :
+  Action(
+    type = ActionType.ACTION_OPEN_SETTINGS,
+    icon = Icons.Outlined.Settings,
+    functionCallDetails = FunctionCallDetails(functionName = "openSettings", parameters = listOf()),
+  )
+
+// Action to open the Android quick settings panel.
+class OpenQuickSettingsAction() :
+  Action(
+    type = ActionType.ACTION_OPEN_QUICK_SETTINGS,
+    icon = Icons.Outlined.Settings,
+    functionCallDetails = FunctionCallDetails(functionName = "openQuickSettings", parameters = listOf()),
+  )
+
+// Action to open the Android internet connectivity panel.
+class OpenInternetPanelAction() :
+  Action(
+    type = ActionType.ACTION_OPEN_INTERNET_PANEL,
+    icon = Icons.Outlined.Wifi,
+    functionCallDetails = FunctionCallDetails(functionName = "openInternetControlPanel", parameters = listOf()),
+  )
+
+// Action to open Bluetooth settings.
+class OpenBluetoothSettingsAction() :
+  Action(
+    type = ActionType.ACTION_OPEN_BLUETOOTH_SETTINGS,
+    icon = Icons.Outlined.Settings,
+    functionCallDetails = FunctionCallDetails(functionName = "openBluetoothSettings", parameters = listOf()),
   )
