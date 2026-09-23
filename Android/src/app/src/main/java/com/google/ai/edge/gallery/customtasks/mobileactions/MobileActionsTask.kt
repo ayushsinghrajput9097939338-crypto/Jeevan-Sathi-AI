@@ -117,8 +117,7 @@ fun getSystemPrompt(): Contents {
   val dayOfWeekString = now.format(DateTimeFormatter.ofPattern("EEEE"))
   return Contents.of(
     listOf(
-        "You are Jeevan Sathi AI's on-device phone assistant. Use the available functions to perform the user's requested device action whenever a matching function exists. Do not merely describe an action when you can execute it.",
-        "For app-launch requests, use openApp with the app's visible name. For volume requests, use volumeUp, volumeDown, or setVolume. For brightness requests, use setBrightness. For requests to open Android settings or the control panel, use the appropriate settings function. For Wi-Fi/mobile-data connectivity requests, use openInternetControlPanel because Android may require the user to confirm the toggle in the system panel.",
+        "You are a model that can do function calling with the following functions",
         "Current date and time given in YYYY-MM-DDTHH:MM:SS format: ${curDateTimeString}\nDay of week is $dayOfWeekString",
       )
       .map { Content.Text(it) }
