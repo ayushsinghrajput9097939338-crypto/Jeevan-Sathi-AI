@@ -20,7 +20,7 @@
   <style name="Theme.Gallery.SplashScreen" parent="Theme.SplashScreen">
       <!-- Need to match surfaceLight in Colors.kt -->
       <item name="windowSplashScreenBackground">#FFFFFCF8</item>
-      <item name="windowSplashScreenAnimatedIcon">@drawable/jeevan_sathi_icon</item>
+      <item name="windowSplashScreenAnimatedIcon">@drawable/splash_jeevan_sathi_icon</item>
       <item name="postSplashScreenTheme">@style/Theme.Gallery</item>
   </style>
   <style name="Theme.Gallery.OssLicenses" parent="Theme.AppCompat.Light.DarkActionBar">
