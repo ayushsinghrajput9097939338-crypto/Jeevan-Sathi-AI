@@ -47,9 +47,6 @@
       "updateInfo": "The updated model now leverages Gemma 4's built-in Multi Token Prediction (MTP) for faster decode on select workloads. You can enable or disable MTP using a new toggle in chat configuration."
     },
     {
-model now leverages Gemma 4's built-in Multi Token Prediction (MTP) for faster decode on select workloads. You can enable or disable MTP using a new toggle in chat configuration."
-    },
-    {
       "name": "Gemma-3n-E2B-it",
       "modelId": "google/gemma-3n-E2B-it-litert-lm",
       "modelFile": "gemma-3n-E2B-it-int4.litertlm",
