@@ -180,94 +180,85 @@
       ]
     },
     {
-      "name": "Llama-3.2-3B",
-      "modelId": "litert-community/Llama-3.2-3B",
-      "modelFile": "llama3_2_3b_mixed_int4_gpu.litertlm",
-      "description": "Llama 3.2 3B LiteRT-LM bundle for on-device text generation.",
-      "sizeInBytes": 2210000000,
-      "minDeviceMemoryInGb": 8,
-      "commitHash": "5576886919bde153038ae7e17acb90b425b8a1be",
-      "llmSupportImage": false,
-      "llmSupportAudio": false,
-      "defaultConfig": {
-        "topK": 64,
-        "topP": 0.95,
-        "temperature": 0.7,
-        "maxContextLength": 2048,
-        "maxTokens": 1024,
-        "accelerators": "cpu"
-      },
-      "taskTypes": [
-        "llm_chat",
-        "llm_prompt_lab"
-      ],
-      "bestForTaskTypes": [
-        "llm_chat",
-        "llm_prompt_lab"
-      ]
-    },
-    {
-      "name": "Qwen2.5-Coder-3B-Instruct",
-      "modelId": "litert-community/Qwen2.5-Coder-3B-Instruct",
-      "modelFile": "Qwen2.5_Coder_3B_It.litertlm",
-      "description": "Qwen2.5 Coder 3B Instruct LiteRT-LM bundle optimized for on-device text generation and coding.",
-      "sizeInBytes": 3433083824,
-      "minDeviceMemoryInGb": 8,
-      "commitHash": "28a2cdaa34499413137d434ff242fc2a7faf7f63",
-      "llmSupportImage": false,
-      "llmSupportAudio": false,
-      "defaultConfig": {
-        "topK": 64,
-        "topP": 0.95,
-        "temperature": 0.7,
-        "maxTokens": 2048,
-        "accelerators": "cpu"
-      },
-      "taskTypes": [
-        "llm_chat",
-        "llm_prompt_lab"
-      ],
-      "bestForTaskTypes": [
-        "llm_prompt_lab",
-        "llm_chat"
-      ],
-      "capabilityToTaskTypes": {}
-    },
-    {
-      "name": "Ministral-3-3B-Reasoning-2512",
-      "modelId": "litert-community/Ministral-3-3B-Reasoning-2512",
-      "modelFile": "model.litertlm",
-      "description": "Ministral 3 3B reasoning LiteRT-LM bundle for on-device text generation and reasoning.",
-      "sizeInBytes": 2340982768,
-      "minDeviceMemoryInGb": 8,
-      "commitHash": "04988154c6914aa1c5de1142fc218f83a117030a",
-      "llmSupportImage": false,
-      "llmSupportAudio": false,
-      "capabilities": [
-        "llm_thinking"
-      ],
-      "defaultConfig": {
-        "topK": 64,
-        "topP": 0.95,
-        "temperature": 0.7,
-        "maxContextLength": 4096,
-        "maxTokens": 4096,
-        "accelerators": "cpu"
-      },
-      "taskTypes": [
-        "llm_chat",
-        "llm_prompt_lab"
-      ],
-      "bestForTaskTypes": [
-        "llm_chat",
-        "llm_prompt_lab"
-      ],
-      "capabilityToTaskTypes": {
-        "llm_thinking": [
-          "llm_chat",
-          "llm_prompt_lab"
-        ]
-      }
+  "name": "SmolLM2-1.7B-Instruct",
+  "modelId": "litert-community/SmolLM2-1.7B-Instruct",
+  "modelFile": "SmolLM2-1_7B-Instruct_dynamic_wi8_afp32.litertlm",
+  "description": "SmolLM2 1.7B Instruct LiteRT-LM bundle for on-device text generation.",
+  "sizeInBytes": 1730949280,
+  "minDeviceMemoryInGb": 6,
+  "commitHash": "c0ee765a9f197467ead8f22b9bf7bbeb4e6307c7",
+  "llmSupportImage": false,
+  "llmSupportAudio": false,
+  "defaultConfig": {
+    "topK": 64,
+    "topP": 0.95,
+    "temperature": 0.7,
+    "maxTokens": 1024,
+    "accelerators": "cpu"
+  },
+  "taskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ],
+  "bestForTaskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ]
+},
+{
+  "name": "Zamba2-2.7B-instruct",
+  "modelId": "litert-community/Zamba2-2.7B-instruct",
+  "modelFile": "Zamba2-2.7B-instruct_int8.litertlm",
+  "description": "Zamba2 2.7B Instruct LiteRT-LM bundle for on-device text generation.",
+  "sizeInBytes": 2803107344,
+  "minDeviceMemoryInGb": 8,
+  "commitHash": "7e6e0819f3d4ae11787a7b8b4ee0e008d141551d",
+  "llmSupportImage": false,
+  "llmSupportAudio": false,
+  "defaultConfig": {
+    "topK": 64,
+    "topP": 0.95,
+    "temperature": 0.7,
+    "maxContextLength": 4096,
+    "maxTokens": 1024,
+    "accelerators": "cpu"
+  },
+  "taskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ],
+  "bestForTaskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ]
+},
+{
+  "name": "Qwen2.5-1.5B-Instruct",
+  "modelId": "litert-community/Qwen2.5-1.5B-Instruct",
+  "modelFile": "Qwen2.5-1.5B-Instruct_multi-prefill-seq_q8_ekv4096.litertlm",
+  "description": "Qwen2.5 1.5B Instruct LiteRT-LM bundle for on-device text generation.",
+  "sizeInBytes": 1597931520,
+  "minDeviceMemoryInGb": 6,
+  "commitHash": "19edb84c69a0212f29a6ef17ba0d6f278b6a1614",
+  "llmSupportImage": false,
+  "llmSupportAudio": false,
+  "defaultConfig": {
+    "topK": 64,
+    "topP": 0.95,
+    "temperature": 0.7,
+    "maxContextLength": 4096,
+    "maxTokens": 1024,
+    "accelerators": "cpu"
+  },
+  "taskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ],
+  "bestForTaskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ]
+}
     }
   ]
 }
