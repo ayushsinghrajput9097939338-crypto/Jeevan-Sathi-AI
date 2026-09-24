@@ -111,6 +111,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -185,6 +189,8 @@ fun MessageInputText(
   onModelNotSupportAudio: () -> Unit = {},
 ) {
   val context = LocalContext.current
+  val keyboardController = LocalSoftwareKeyboardController.current
+val focusRequester = remember { FocusRequester() }
   val lifecycleOwner = LocalLifecycleOwner.current
   val scope = rememberCoroutineScope()
   val modelManagerUiState by modelManagerViewModel.uiState.collectAsState()
@@ -400,7 +406,15 @@ fun MessageInputText(
                       disabledContainerColor = Color.Transparent,
                     ),
                   textStyle = bodyLargeNarrow,
-                  modifier = Modifier.weight(1f).semantics { contentDescription = cdPromptInput },
+                  modifier =
+  Modifier.weight(1f)
+    .focusRequester(focusRequester)
+    .onFocusChanged { focusState ->
+      if (focusState.isFocused) {
+        keyboardController?.show()
+      }
+    }
+    .semantics { contentDescription = cdPromptInput },
                   placeholder = { Text(stringResource(textFieldPlaceHolderRes)) },
                 )
                 Spacer(modifier = Modifier.width(4.dp))
