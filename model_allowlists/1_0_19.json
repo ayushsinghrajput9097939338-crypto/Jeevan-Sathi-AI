@@ -62,8 +62,92 @@
         "temperature": 1.0,
         "maxTokens": 4096,
         "accelerators": "cpu,gpu"
-    },
-    {
+       {
+  "name": "Llama-3.2-3B",
+  "modelId": "litert-community/Llama-3.2-3B",
+  "modelFile": "Llama-3.2-3B.litertlm",
+  "description": "Meta Llama 3.2 3B optimized for on-device text generation using LiteRT-LM.",
+  "sizeInBytes": 2147483648,
+  "minDeviceMemoryInGb": 6,
+  "llmSupportImage": false,
+  "llmSupportAudio": false,
+  "defaultConfig": {
+    "topK": 64,
+    "topP": 0.95,
+    "temperature": 0.7,
+    "maxContextLength": 2048,
+    "maxTokens": 1024,
+    "accelerators": "cpu"
+  },
+  "taskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ],
+  "bestForTaskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ]
+},
+{
+  "name": "Qwen2.5-Coder-3B-Instruct",
+  "modelId": "litert-community/Qwen2.5-Coder-3B-Instruct",
+  "modelFile": "Qwen2.5_Coder_3B_It.litertlm",
+  "description": "Qwen2.5 Coder 3B Instruct optimized for on-device coding and text generation using LiteRT-LM.",
+  "sizeInBytes": 3400000000,
+  "minDeviceMemoryInGb": 8,
+  "llmSupportImage": false,
+  "llmSupportAudio": false,
+  "defaultConfig": {
+    "topK": 64,
+    "topP": 0.95,
+    "temperature": 0.7,
+    "maxTokens": 2048,
+    "accelerators": "cpu"
+  },
+  "taskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ],
+  "bestForTaskTypes": [
+    "llm_prompt_lab",
+    "llm_chat"
+  ]
+},
+{
+  "name": "Ministral-3-3B-Reasoning-2512",
+  "modelId": "litert-community/Ministral-3-3B-Reasoning-2512",
+  "modelFile": "model.litertlm",
+  "description": "Ministral 3 3B Reasoning optimized for on-device reasoning and text generation using LiteRT-LM.",
+  "sizeInBytes": 2300000000,
+  "minDeviceMemoryInGb": 8,
+  "llmSupportImage": false,
+  "llmSupportAudio": false,
+  "capabilities": [
+    "llm_thinking"
+  ],
+  "defaultConfig": {
+    "topK": 64,
+    "topP": 0.95,
+    "temperature": 0.7,
+    "maxContextLength": 4096,
+    "maxTokens": 4096,
+    "accelerators": "cpu"
+  },
+  "taskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ],
+  "bestForTaskTypes": [
+    "llm_chat",
+    "llm_prompt_lab"
+  ],
+  "capabilityToTaskTypes": {
+    "llm_thinking": [
+      "llm_chat",
+      "llm_prompt_lab"
+    ]
+  }
+}
       "name": "Gemma3-1B-IT",
       "modelId": "litert-community/Gemma3-1B-IT",
       "modelFile": "gemma3-1b-it-int4.litertlm",
