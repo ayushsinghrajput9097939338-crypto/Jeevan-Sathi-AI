@@ -4,13 +4,16 @@
       "name": "Gemma-4-E2B-it",
       "modelId": "litert-community/gemma-4-E2B-it-litert-lm",
       "modelFile": "gemma-4-E2B-it.litertlm",
-      "description": "A variant of Gemma 4 E2B ready for deployment on Android using [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM/blob/main/docs/api/kotlin/getting_started.md). It supports multi-modality input, with up to 32K context length.",
+      "description": "A variant of Gemma 4 E2B ready for deployment on Android using LiteRT-LM. It supports multi-modality input, with up to 32K context length.",
       "sizeInBytes": 2588147712,
       "minDeviceMemoryInGb": 8,
       "commitHash": "6e5c4f1e395deb959c494953478fa5cec4b8008f",
       "llmSupportImage": true,
       "llmSupportAudio": true,
-      "capabilities": ["llm_thinking", "speculative_decoding"],
+      "capabilities": [
+        "llm_thinking",
+        "speculative_decoding"
+      ],
       "defaultConfig": {
         "topK": 64,
         "topP": 0.95,
@@ -35,8 +38,17 @@
         "llm_ask_audio"
       ],
       "capabilityToTaskTypes": {
-        "llm_thinking": ["llm_chat", "llm_ask_image", "llm_ask_audio"],
-        "speculative_decoding": ["llm_chat", "llm_ask_image", "llm_ask_audio", "llm_prompt_lab"]
+        "llm_thinking": [
+          "llm_chat",
+          "llm_ask_image",
+          "llm_ask_audio"
+        ],
+        "speculative_decoding": [
+          "llm_chat",
+          "llm_ask_image",
+          "llm_ask_audio",
+          "llm_prompt_lab"
+        ]
       },
       "updatableModelFiles": [
         {
@@ -50,7 +62,7 @@
       "name": "Gemma-3n-E2B-it",
       "modelId": "google/gemma-3n-E2B-it-litert-lm",
       "modelFile": "gemma-3n-E2B-it-int4.litertlm",
-      "description": "A variant of [Gemma 3n E2B](https://ai.google.dev/gemma/docs/gemma-3n) ready for deployment on Android using [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM/blob/main/kotlin/README.md). It supports text, vision, and audio input, with 4096 context length.",
+      "description": "A variant of Gemma 3n E2B ready for deployment on Android using LiteRT-LM. It supports text, vision, and audio input, with 4096 context length.",
       "sizeInBytes": 3655827456,
       "minDeviceMemoryInGb": 8,
       "commitHash": "ba9ca88da013b537b6ed38108be609b8db1c3a16",
@@ -62,99 +74,32 @@
         "temperature": 1.0,
         "maxTokens": 4096,
         "accelerators": "cpu,gpu"
-       {
-  "name": "Llama-3.2-3B",
-  "modelId": "litert-community/Llama-3.2-3B",
-  "modelFile": "Llama-3.2-3B.litertlm",
-  "description": "Meta Llama 3.2 3B optimized for on-device text generation using LiteRT-LM.",
-  "sizeInBytes": 2147483648,
-  "minDeviceMemoryInGb": 6,
-  "llmSupportImage": false,
-  "llmSupportAudio": false,
-  "defaultConfig": {
-    "topK": 64,
-    "topP": 0.95,
-    "temperature": 0.7,
-    "maxContextLength": 2048,
-    "maxTokens": 1024,
-    "accelerators": "cpu"
-  },
-  "taskTypes": [
-    "llm_chat",
-    "llm_prompt_lab"
-  ],
-  "bestForTaskTypes": [
-    "llm_chat",
-    "llm_prompt_lab"
-  ]
-},
-{
-  "name": "Qwen2.5-Coder-3B-Instruct",
-  "modelId": "litert-community/Qwen2.5-Coder-3B-Instruct",
-  "modelFile": "Qwen2.5_Coder_3B_It.litertlm",
-  "description": "Qwen2.5 Coder 3B Instruct optimized for on-device coding and text generation using LiteRT-LM.",
-  "sizeInBytes": 3400000000,
-  "minDeviceMemoryInGb": 8,
-  "llmSupportImage": false,
-  "llmSupportAudio": false,
-  "defaultConfig": {
-    "topK": 64,
-    "topP": 0.95,
-    "temperature": 0.7,
-    "maxTokens": 2048,
-    "accelerators": "cpu"
-  },
-  "taskTypes": [
-    "llm_chat",
-    "llm_prompt_lab"
-  ],
-  "bestForTaskTypes": [
-    "llm_prompt_lab",
-    "llm_chat"
-  ]
-},
-{
-  "name": "Ministral-3-3B-Reasoning-2512",
-  "modelId": "litert-community/Ministral-3-3B-Reasoning-2512",
-  "modelFile": "model.litertlm",
-  "description": "Ministral 3 3B Reasoning optimized for on-device reasoning and text generation using LiteRT-LM.",
-  "sizeInBytes": 2300000000,
-  "minDeviceMemoryInGb": 8,
-  "llmSupportImage": false,
-  "llmSupportAudio": false,
-  "capabilities": [
-    "llm_thinking"
-  ],
-  "defaultConfig": {
-    "topK": 64,
-    "topP": 0.95,
-    "temperature": 0.7,
-    "maxContextLength": 4096,
-    "maxTokens": 4096,
-    "accelerators": "cpu"
-  },
-  "taskTypes": [
-    "llm_chat",
-    "llm_prompt_lab"
-  ],
-  "bestForTaskTypes": [
-    "llm_chat",
-    "llm_prompt_lab"
-  ],
-  "capabilityToTaskTypes": {
-    "llm_thinking": [
-      "llm_chat",
-      "llm_prompt_lab"
-    ]
-  }
-}
+      },
+      "taskTypes": [
+        "llm_chat",
+        "llm_prompt_lab",
+        "llm_agent_chat",
+        "llm_ask_image",
+        "llm_ask_audio"
+      ],
+      "bestForTaskTypes": [
+        "llm_chat",
+        "llm_prompt_lab",
+        "llm_agent_chat",
+        "llm_ask_image",
+        "llm_ask_audio"
+      ]
+    },
+    {
       "name": "Gemma3-1B-IT",
       "modelId": "litert-community/Gemma3-1B-IT",
       "modelFile": "gemma3-1b-it-int4.litertlm",
-      "description": "A variant of [google/Gemma-3-1B-IT](https://huggingface.co/google/Gemma-3-1B-IT) with 4-bit quantization ready for deployment on Android using [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM/blob/main/kotlin/README.md).",
+      "description": "A variant of Google Gemma 3 1B IT with 4-bit quantization ready for deployment on Android using LiteRT-LM.",
       "sizeInBytes": 584417280,
       "minDeviceMemoryInGb": 6,
       "commitHash": "42d538a932e8d5b12e6b3b455f5572560bd60b2c",
+      "llmSupportImage": false,
+      "llmSupportAudio": false,
       "defaultConfig": {
         "topK": 64,
         "topP": 0.95,
@@ -162,8 +107,14 @@
         "maxTokens": 1024,
         "accelerators": "gpu,cpu"
       },
-      "taskTypes": ["llm_chat", "llm_prompt_lab"],
-      "bestForTaskTypes": ["llm_chat", "llm_prompt_lab"]
+      "taskTypes": [
+        "llm_chat",
+        "llm_prompt_lab"
+      ],
+      "bestForTaskTypes": [
+        "llm_chat",
+        "llm_prompt_lab"
+      ]
     },
     {
       "name": "TinyGarden-270M",
@@ -173,6 +124,8 @@
       "sizeInBytes": 288964608,
       "minDeviceMemoryInGb": 6,
       "commitHash": "c205853ff82da86141a1105faa2344a8b176dfe7",
+      "llmSupportImage": false,
+      "llmSupportAudio": false,
       "defaultConfig": {
         "topK": 64,
         "topP": 0.95,
@@ -195,6 +148,8 @@
       "sizeInBytes": 288964608,
       "minDeviceMemoryInGb": 6,
       "commitHash": "38942192c9b723af836d489074823ff33d4a3e7a",
+      "llmSupportImage": false,
+      "llmSupportAudio": false,
       "defaultConfig": {
         "topK": 64,
         "topP": 0.95,
@@ -217,8 +172,102 @@
       "url": "https://storage.googleapis.com/mediapipe-models/interactive_segmenter_v2/magic_touch/int8/latest/interactive_segmentation.task",
       "sizeInBytes": 30525312,
       "commitHash": "20260810",
-      "taskTypes": ["mp_scrapbook"],
-      "bestForTaskTypes": ["mp_scrapbook"]
+      "taskTypes": [
+        "mp_scrapbook"
+      ],
+      "bestForTaskTypes": [
+        "mp_scrapbook"
+      ]
+    },
+    {
+      "name": "Llama-3.2-3B",
+      "modelId": "litert-community/Llama-3.2-3B",
+      "modelFile": "llama3_2_3b_mixed_int4_gpu.litertlm",
+      "description": "Llama 3.2 3B LiteRT-LM bundle for on-device text generation.",
+      "sizeInBytes": 2210000000,
+      "minDeviceMemoryInGb": 8,
+      "commitHash": "5576886919bde153038ae7e17acb90b425b8a1be",
+      "llmSupportImage": false,
+      "llmSupportAudio": false,
+      "defaultConfig": {
+        "topK": 64,
+        "topP": 0.95,
+        "temperature": 0.7,
+        "maxContextLength": 2048,
+        "maxTokens": 1024,
+        "accelerators": "cpu"
+      },
+      "taskTypes": [
+        "llm_chat",
+        "llm_prompt_lab"
+      ],
+      "bestForTaskTypes": [
+        "llm_chat",
+        "llm_prompt_lab"
+      ]
+    },
+    {
+      "name": "Qwen2.5-Coder-3B-Instruct",
+      "modelId": "litert-community/Qwen2.5-Coder-3B-Instruct",
+      "modelFile": "Qwen2.5_Coder_3B_It.litertlm",
+      "description": "Qwen2.5 Coder 3B Instruct LiteRT-LM bundle optimized for on-device text generation and coding.",
+      "sizeInBytes": 3433083824,
+      "minDeviceMemoryInGb": 8,
+      "commitHash": "28a2cdaa34499413137d434ff242fc2a7faf7f63",
+      "llmSupportImage": false,
+      "llmSupportAudio": false,
+      "defaultConfig": {
+        "topK": 64,
+        "topP": 0.95,
+        "temperature": 0.7,
+        "maxTokens": 2048,
+        "accelerators": "cpu"
+      },
+      "taskTypes": [
+        "llm_chat",
+        "llm_prompt_lab"
+      ],
+      "bestForTaskTypes": [
+        "llm_prompt_lab",
+        "llm_chat"
+      ],
+      "capabilityToTaskTypes": {}
+    },
+    {
+      "name": "Ministral-3-3B-Reasoning-2512",
+      "modelId": "litert-community/Ministral-3-3B-Reasoning-2512",
+      "modelFile": "model.litertlm",
+      "description": "Ministral 3 3B reasoning LiteRT-LM bundle for on-device text generation and reasoning.",
+      "sizeInBytes": 2340982768,
+      "minDeviceMemoryInGb": 8,
+      "commitHash": "04988154c6914aa1c5de1142fc218f83a117030a",
+      "llmSupportImage": false,
+      "llmSupportAudio": false,
+      "capabilities": [
+        "llm_thinking"
+      ],
+      "defaultConfig": {
+        "topK": 64,
+        "topP": 0.95,
+        "temperature": 0.7,
+        "maxContextLength": 4096,
+        "maxTokens": 4096,
+        "accelerators": "cpu"
+      },
+      "taskTypes": [
+        "llm_chat",
+        "llm_prompt_lab"
+      ],
+      "bestForTaskTypes": [
+        "llm_chat",
+        "llm_prompt_lab"
+      ],
+      "capabilityToTaskTypes": {
+        "llm_thinking": [
+          "llm_chat",
+          "llm_prompt_lab"
+        ]
+      }
     }
   ]
 }
