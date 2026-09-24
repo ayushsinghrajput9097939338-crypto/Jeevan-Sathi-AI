@@ -190,7 +190,7 @@ fun MessageInputText(
 ) {
   val context = LocalContext.current
   val keyboardController = LocalSoftwareKeyboardController.current
-val focusRequester = remember { FocusRequester() }
+  val focusRequester = remember { FocusRequester() }
   val lifecycleOwner = LocalLifecycleOwner.current
   val scope = rememberCoroutineScope()
   val modelManagerUiState by modelManagerViewModel.uiState.collectAsState()
