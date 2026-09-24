@@ -283,9 +283,6 @@ fun ChatPanel(
         // If downward scroll, clear the focus from any currently focused composable.
         // This is useful for dismissing software keyboards or hiding text input fields
         // when the user starts scrolling down a list.
-        if (available.y > 0 && source == NestedScrollSource.UserInput) {
-  focusManager.clearFocus()
-        }
         // Let LazyColumn handle the scroll
         return Offset.Zero
       }
