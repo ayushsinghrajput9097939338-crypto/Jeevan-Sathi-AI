@@ -186,6 +186,7 @@
       "description": "Llama 3.2 1B LiteRT-LM bundle for on-device text generation.",
       "sizeInBytes": 964000000,
       "minDeviceMemoryInGb": 6,
+      "commitHash": "main",
       "llmSupportImage": false,
       "llmSupportAudio": false,
       "defaultConfig": {
@@ -239,6 +240,7 @@
       "description": "MiniCPM5 1B LiteRT-LM model for on-device text generation.",
       "sizeInBytes": 793034752,
       "minDeviceMemoryInGb": 6,
+      "commitHash": "main",
       "llmSupportImage": false,
       "llmSupportAudio": false,
       "defaultConfig": {
