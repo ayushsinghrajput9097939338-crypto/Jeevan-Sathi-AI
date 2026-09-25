@@ -258,33 +258,6 @@ fun ModelList(
           )
 
           // Urls.
-          if (task.docUrl.isNotEmpty() || task.sourceCodeUrl.isNotEmpty()) {
-            Box(
-              modifier =
-                Modifier.padding(vertical = 8.dp).graphicsLayer {
-                  alpha = descriptionProgress
-                  translationY = (CONTENT_ANIMATION_OFFSET * (1 - descriptionProgress)).toPx()
-                }
-            ) {
-              Column(
-                horizontalAlignment = Alignment.Start,
-                verticalArrangement = Arrangement.spacedBy(4.dp),
-              ) {
-                if (task.docUrl.isNotEmpty()) {
-                  ClickableLink(
-                    url = task.docUrl,
-                    linkText = stringResource(R.string.api_doc),
-                    icon = Icons.Outlined.Description,
-                  )
-                }
-                if (task.sourceCodeUrl.isNotEmpty()) {
-                  ClickableLink(
-                    url = task.sourceCodeUrl,
-                    linkText = stringResource(R.string.example_code),
-                    icon = Icons.Outlined.Code,
-                  )
-                }
-              }
             }
           }
 
